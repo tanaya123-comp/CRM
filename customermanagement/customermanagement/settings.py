@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-from .secret_settings import *
+#from .secret_settings import *
+from src.customermanagement.secret_settings import *
 
 
 
