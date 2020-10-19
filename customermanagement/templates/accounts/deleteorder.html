@@ -1,0 +1,13 @@
+{%  extends 'accounts/main.html' %}
+{% block content %}
+    <p>{{name}},Are You sure you wanna delete?{{item}}</p>
+
+    <a href="{% url 'dashboard' %}"><button type="submit">Cancel</button></a>
+    <form  method="post" action="">
+        {% csrf_token %}
+
+
+        <a><button type="submit">Confirm</button></a>
+
+    </form>
+{% endblock %}

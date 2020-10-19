@@ -1,0 +1,16 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+
+<p>Customer Name:{{name}}</p>
+<br>
+<form method="post" action="">
+    {{ form.management_data }}
+    {% csrf_token %}
+
+    {% for i in form %}
+    {{i.as_p}}
+    {% endfor %}
+    <button type="submit">Order</button>
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{%  extends 'accounts/main.html' %}
+{% block content %}
+    <p>Hi,{{name}} are you sure you want to delete your account?</p>
+
+   <a href="{% url 'dashboard' %}"><button type="submit">Cancel</button></a>
+    <br>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm</button>
+    </form>
+
+
+{% endblock %}
